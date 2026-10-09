@@ -1,0 +1,27 @@
+// Варіант за списком 7
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main(){
+	double a = 2, b = 200;
+	double y;
+
+	y = pow((11.21 * (1 + log(b/a))) / (1 - sin((a/b)*M_PI) * cos((a/b)*M_PI)) , 2.0/3.0;
+
+	cout << "y = " << y ;
+	return 0;
+}
+
+//Варіант за списком +5 (12)
+
+int main(){
+	double a = 3, b = 0.707;
+	double y;
+
+	y = pow(0.5*sin(log(exp(b+a))*(M_PI/8)) + 1.308*cos(log(exp(a-b))*(M_PI/8)) , 2.0/3.0;
+
+	cout << "y = " << y ;
+	return 0;
+}

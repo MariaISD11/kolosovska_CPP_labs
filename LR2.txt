@@ -1,0 +1,38 @@
+// Варіант 7. Завдання № 1
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main(){
+	double x, z;
+
+	cout << "Type an x: ";
+	cin >> x;
+
+	if (x >= 0){
+		z = cos(x) - pow(sin(x), 3);}
+	else {
+		z = x * exp(-x) + 1.0 / (x-1.3);}
+
+	cout << "Z = " << z;
+	return 0;
+}
+
+// № 2
+
+int main(){
+	double x, z;
+
+	cout << "Type an x: ";
+	cin >> x;
+	cout << "Type an y: ";
+	cin >> y;
+
+	if (x >= 0 && y >= 0 && x + y <= 2){
+		cout << "Dot is in the area";}
+	else {
+		cout << "Dot isn't in the area";}
+
+	return 0;
+}
