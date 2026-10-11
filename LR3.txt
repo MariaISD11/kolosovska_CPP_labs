@@ -1,0 +1,62 @@
+// Варіант 7. Завдання 1
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    	int n;
+    	cout << "Type an N: ";
+	cin >> n;
+	
+	if (n>99 || n<1000){
+	    	int a = n / 100;       
+        	int b = (n / 10) % 10; 
+        	int c = n % 10;
+	    
+	    	int count = 0;
+        	if (a > 5) count++;
+        	if (b > 5) count++;
+        	if (c > 5) count++;
+        
+        	cout << "Count of numbers that >5: " << count;
+	}
+    	else{
+        	cout << "Wrong input";
+    	}
+
+	// Завдання 2
+    
+    char l;
+    cout << "Type an letter (i, a, g, s, f, j, e): ";
+    cin >> l;
+    l = tolower(l);
+    
+    switch(l){
+        case 'i':
+            cout << "Country: India\nContinent: South Asia\nArea: 3 287 263 km^2";
+            break;
+        case 'a':
+            cout << "Country: Argentina\nContinent: South America\nArea: 2 780 085 km^2";
+            break;
+        case 'g':
+            cout << "Country: Germany\nContinent: Central Europe\nArea: 357 022 km^2";
+            break;
+        case 's':
+            cout << "Country: Spain\nContinent: Southern and Western Europe\nArea: 506 030 km^2";
+            break;
+        case 'f':
+            cout << "Country: France\nContinent: Western Europe\nArea: 632 702 km^2";
+            break;
+        case 'j':
+            cout << "Country: Japan\nContinent: East Asia\nArea: 377 975 km^2";
+            break;
+        case 'e':
+            cout << "Country: Egypt\nContinent: Africa and southwest corner of Asia\nArea: 1 010 408 km^2";
+            break;
+        default:
+            cout << "There is no this letter in the list";
+    }
+
+    	return 0;
+}

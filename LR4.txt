@@ -1,0 +1,92 @@
+// Завдання № 6
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    bool answer;
+    int value;
+    
+    cout << "Enter a value: ";
+    cin >> value;
+    
+    answer = (value>=0 && value<10) || (value*2 < 20 && value-2 > -2) || 
+    (value-1 > 1 && value/2 < 10) || (value == 111);
+
+    cout << (answer ? "THAT'S TRUE :)" : "THAT'S NOT TRUE :(") << endl;
+    return 0;
+}
+
+// № 7
+
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+    double n1, n2, n3, n4, n5;
+    cout << "Put these values into your code:\n";
+    cin >> n1 >> n2 >> n3 >> n4 >> n5;
+    
+    cout << "\n" << n1 << endl;
+    cout << fixed << setprecision(2) << n2 << endl;
+    cout << setprecision(6) << n3 << endl;
+    cout << setprecision(2) << n4 << endl;
+    cout << setprecision(0) << n5 << endl;
+    
+    return 0;
+}
+
+// № 8
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+    int v1, v2;
+    cout << "Type an two numbers: ";
+    cin >> v1 >> v2;
+    
+    float result1 = 1.0f / static_cast<float>(v1);
+    float result2 = 1.0f / static_cast<float>(v2);
+    float eps = 0.000001f;
+    
+    if (abs(result1 - result2) < eps) {
+        cout << "Results are equal (by 0.000001 epsilon)";
+    } else {
+        cout << "Results are not equal (by 0.000001 epsilon)";
+    }
+
+    return 0;
+}
+
+// № 9
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+    int o1, o2, o3, o4;
+    cout << "Type 4 numbers from 1 to 255: ";
+    cin >> o1 >> o2 >> o3 >> o4;
+    
+    if (o1 >= 1 && o1 <= 255 &&
+        o2 >= 1 && o2 <= 255 &&
+        o3 >= 1 && o3 <= 255 &&
+        o4 >= 1 && o4 <= 255)
+    {
+        string ip = to_string(o1) + "." + to_string(o2) + "." + to_string(o3) + "." + to_string(o4);
+        cout << ip;
+    }
+    else{
+        cout << "Wrong input";
+    }
+
+    return 0;
+}
