@@ -1,0 +1,66 @@
+// Варіант 7
+
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+	//Завдання № 1
+
+	double x, y;
+
+    	for (int i = 1; i <= 5; i++)
+    	{
+        	cout << i << ". If x = ";
+        	cin >> x;
+
+        	y = pow(sin(x), 5) + abs(5 * x - 1.5);
+
+        	cout << "y = " << y << endl;
+    	}
+
+	// № 2
+
+	long long fact = 1;
+    
+    	for (int i = 1; i <= 15; ++i) {
+        	fact *= i; 
+        	cout << i << "! = " << fact << endl;
+    	}
+
+	// № 3
+
+	double a, b, h;
+    
+    	cout << "Введіть початок відрізку: ";
+    	cin >> a;
+    	cout << "Введіть кінець відрізку: ";
+    	cin >> b;
+    	cout << "Введіть крок: ";
+    	cin >> h;
+    
+    	if (h <= 0 || a > b){
+        	cout << "Помилка, перевірте введені значення. h має бути > 0 , a < b";
+        	return 0;
+    	}
+    
+    	cout << "-----------------" << endl;
+    	cout << ":   X   :   Y   :" << endl;
+    	cout << "-----------------" << endl;
+
+    	for (double x = a; x <= b; x += h) {
+        	if (x < -3 || x == 0) {
+            		cout << "-----------------" << endl;
+            		cout << "Помилка: значення x = " << x << " не належить ОДЗ (x >= -3, x != 0). Виведення припинено." << endl;
+            		break;
+        	}
+
+        	double y = (1.0 / x) + sqrt(x + 3) + 6;
+        	cout << ": " << setw(2) << x << " : " << setw(5) << y << " :" << endl;
+        	cout << "-----------------" << endl;
+    	}
+
+    	return 0;	
+}
