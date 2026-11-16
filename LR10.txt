@@ -1,0 +1,197 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
+int main()
+{
+// 1
+
+    srand(time(0));
+    const int m = 4, n = 3;
+    int arr[m][n];
+
+    cout << "Масив (" << m << "x" << n << "):\n";
+    for (int i = 0; i < m; ++i) {
+        for (int j = 0; j < n; ++j) {
+            arr[i][j] = rand() % 100;
+            cout << arr[i][j] << "\t";
+        }
+        cout << endl;
+    }
+
+    cout << "\nКількість парних чисел у кожному рядку:\n";
+    for (int i = 0; i < m; ++i) {
+        int count = 0;
+        for (int j = 0; j < n; ++j) {
+            if (arr[i][j] % 2 == 0) {
+                count++;
+            }
+        }
+        cout << "Рядок " << i << ": " << count << endl;
+    }
+
+// 2
+
+    srand(time(0));
+    const int m = 6, n = 4;
+    int arr[m][n];
+    
+    cout << "Масив (" << m << "x" << n << "):\n";
+    for (int i = 0; i < m; ++i) {
+        for (int j = 0; j < n; ++j) {
+            arr[i][j] = rand() % 100;
+            cout << arr[i][j] << "\t";
+        }
+        cout << endl;
+    }
+    
+    cout << "\nКількість парних чисел у кожному стовпчику:\n";
+    for (int j = 0; j < n; ++j) {
+        int count = 0;
+        for (int i = 0; i < m; ++i) {
+            if (arr[i][j] % 2 == 0) {
+                count++;
+            }
+        }
+        cout << "Стовпчик " << j << ": " << count << endl;
+    }
+
+// 3
+
+    srand(time(0));
+    const int m = 5, n = 7;
+    int arr[m][n];
+    
+    cout << "Масив (" << m << "x" << n << "):\n";
+    for (int i = 0; i < m; ++i) {
+        for (int j = 0; j < n; ++j) {
+            arr[i][j] = rand() % 100;
+            cout << arr[i][j] << "\t";
+        }
+        cout << endl;
+    }
+    
+    cout << "\nСума елементів кожного рядка:\n";
+    for (int i = 0; i < m; ++i) {
+        int sum = 0;
+        for (int j = 0; j < n; ++j) {
+            sum += arr[i][j];
+        }
+        cout << "Рядок " << i << ": " << sum << endl;
+    }
+
+// 4
+
+    srand(time(0));
+    const int m = 4, n = 6;
+    int arr[m][n];
+    
+    cout << "Масив (" << m << "x" << n << "):\n";
+    for (int i = 0; i < m; ++i) {
+        for (int j = 0; j < n; ++j) {
+            arr[i][j] = rand() % 100;
+            cout << arr[i][j] << "\t";
+        }
+        cout << endl;
+    }
+    
+    cout << "\nСума елементів кожного стовпчика:\n";
+    for (int j = 0; j < n; ++j) {
+        int sum = 0;
+        for (int i = 0; i < m; ++i) {
+            sum += arr[i][j];
+        }
+        cout << "Стовпчик " << j << ": " << sum << endl;
+    }
+
+// 5 
+
+    srand(time(0));
+    const int m = 3, n = 4;
+    int arr[m][n];
+    
+    cout << "Масив (" << m << "x" << n << "):\n";
+    for (int i = 0; i < m; ++i) {
+        for (int j = 0; j < n; ++j) {
+            arr[i][j] = rand() % 100;
+            cout << arr[i][j] << "\t";
+        }
+        cout << endl;
+    }
+    
+    int max_val = arr[0][0];
+    int max_i = 0, max_j = 0;
+
+    for (int i = 0; i < m; ++i) {
+        for (int j = 0; j < n; ++j) {
+            if (arr[i][j] > max_val) {
+                max_val = arr[i][j];
+                max_i = i;
+                max_j = j;
+            }
+        }
+    }
+
+    cout << "\nМаксимальний елемент: " << max_val << endl;
+    cout << "Його індекси (рядок, стовпчик): [" << max_i << "][" << max_j << "]" << endl;
+    
+// 6
+
+    srand(time(0));
+    const int m = 4, n = 7;
+    int arr[m][n];
+    
+    cout << "Масив (" << m << "x" << n << "):\n";
+    for (int i = 0; i < m; ++i) {
+        for (int j = 0; j < n; ++j) {
+            arr[i][j] = rand() % 100;
+            cout << arr[i][j] << "\t";
+        }
+        cout << endl;
+    }
+    
+    int min_val = arr[0][0];
+    int min_i = 0, min_j = 0;
+
+    for (int i = 0; i < m; ++i) {
+        for (int j = 0; j < n; ++j) {
+            if (arr[i][j] < min_val) {
+                min_val = arr[i][j];
+                min_i = i;
+                min_j = j;
+            }
+        }
+    }
+
+    cout << "\nМінімальний елемент: " << min_val << endl;
+    cout << "Його індекси (рядок, стовпчик): [" << min_i << "][" << min_j << "]" << endl;
+    
+// 15
+
+    srand(time(0));
+    const int m = 3, n = 3;
+    int arr[m][n];
+    
+    cout << "Масив (" << m << "x" << n << "):\n";
+    for (int i = 0; i < m; ++i) {
+        for (int j = 0; j < n; ++j) {
+            arr[i][j] = rand() % 100;
+            cout << arr[i][j] << "\t";
+        }
+        cout << endl;
+    }
+    
+    int sum1 = 0;
+    int sum2 = 0;
+
+    for (int i = 0; i < n; i++) {
+        sum1 += arr[i][i];
+        sum2 += arr[i][n - 1 - i];
+    }
+
+    cout << "\nСума елементів головної діагоналі: " << sum1 << endl;
+    cout << "Сума елементів побічної діагоналі: " << sum2 << endl;
+    
+    return 0;
+}

@@ -1,0 +1,135 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
+int main()
+{
+// 3
+
+    srand(time(0));
+    const int n = 10;
+    int arr[n];
+
+    cout << "Початковий масив: ";
+    for (int i = 0; i < n; ++i) {
+        arr[i] = rand() % 100;
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+
+    int min_idx = 0, max_idx = 0;
+    for (int i = 1; i < n; ++i) {
+        if (arr[i] < arr[min_idx]) {
+            min_idx = i;
+        }
+        if (arr[i] > arr[max_idx]) {
+            max_idx = i;
+        }
+    }
+
+    swap(arr[min_idx], arr[max_idx]);
+
+    cout << "Новий масив: ";
+    for (int i = 0; i < n; ++i) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+
+// 4
+
+    srand(time(0));
+    const int n = 10;
+    int arr[n];
+
+    cout << "Масив: ";
+    for (int i = 0; i < n; ++i) {
+        arr[i] = rand() % 100; 
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+
+    int A;
+    cout << "Введіть число A: ";
+    cin >> A;
+
+    int count = 0;
+    for (int i = 0; i < n; ++i) {
+        if (arr[i] > A) {
+            count++;
+        }
+    }
+
+    cout << "Кількість елементів, більших за " << A << ": " << count << endl;
+
+// 5
+
+    srand(time(0));
+
+    const int n = 10;
+    int arr[n];
+
+    for (int i = 0; i < n; i++) {
+        arr[i] = rand() % 100 + 1;
+
+        for (int j = 0; j < i; j++) {
+            if (arr[i] == arr[j]) {
+                i--;
+                break;
+            }
+        }
+    }
+
+    cout << "Масив: ";
+    for (int i = 0; i < n; i++) {
+        cout << arr[i] << " ";
+    }
+
+    int max1 = arr[0];
+    int max2 = arr[1];
+
+    if (max2 > max1) {
+        swap(max1, max2);
+    }
+
+    for (int i = 2; i < n; i++) {
+        if (arr[i] > max1) {
+            max2 = max1;
+            max1 = arr[i];
+        }
+        else if (arr[i] > max2) {
+            max2 = arr[i];
+        }
+    }
+
+    cout << "\nДругий за величиною елемент: " << max2;
+
+// 6
+
+    srand(time(0));
+    const int n = 10;
+    int arr[n];
+
+    cout << "Масив: ";
+    for (int i = 0; i < n; ++i) {
+        arr[i] = rand() % 10; 
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+
+    int zero_index = -1;
+    for (int i = 0; i < n; ++i) {
+        if (arr[i] == 0) {
+            zero_index = i;
+            break; 
+        }
+    }
+
+    if (zero_index != -1) {
+        cout << "Індекс першого нульового елемента: " << zero_index << endl;
+    } else {
+        cout << "Масив не містить нульових елементів." << endl;
+    }
+    
+    return 0;
+}

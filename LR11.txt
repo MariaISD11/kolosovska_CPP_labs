@@ -1,0 +1,83 @@
+#include <iostream>
+using namespace std;
+
+// 1
+struct Date {
+    int hours = 0;
+    int minutes = 0;
+};
+
+int main() {
+    Date time;
+    int addedMinutes;
+
+    cin >> time.hours;
+    cin >> time.minutes;
+    cin >> addedMinutes;
+
+    if (time.hours < 0 || time.hours >= 24 ||
+        time.minutes < 0 || time.minutes >= 60 ||
+        addedMinutes < 0) {
+        cout << "Incorrect input";
+        return 0;
+    }
+
+    int totalMinutes = time.hours * 60 + time.minutes;
+
+    totalMinutes += addedMinutes;
+
+    time.hours = (totalMinutes / 60) % 24;
+    time.minutes = totalMinutes % 60;
+
+    cout << time.hours << ":";
+
+    if (time.minutes < 10) {
+        cout << "0";
+    }
+
+    cout << time.minutes;
+
+    return 0;
+}
+
+// 2
+
+#include <iostream>
+using namespace std;
+
+struct Date {
+    int hours = 0;
+    int minutes = 0;
+};
+
+int main() {
+    Date start, end;
+
+    cin >> start.hours >> start.minutes;
+    cin >> end.hours >> end.minutes;
+
+    if (start.hours < 0 || start.hours >= 24 ||
+        start.minutes < 0 || start.minutes >= 60 ||
+        end.hours < 0 || end.hours >= 24 ||
+        end.minutes < 0 || end.minutes >= 60) {
+        cout << "Incorrect input";
+        return 0;
+    }
+
+    int startMinutes = start.hours * 60 + start.minutes;
+    int endMinutes = end.hours * 60 + end.minutes;
+
+    int duration = endMinutes - startMinutes;
+
+    if (duration < 0) {
+        duration += 24 * 60;
+    }
+
+    Date result;
+    result.hours = duration / 60;
+    result.minutes = duration % 60;
+
+    cout << result.hours << ":" << result.minutes;
+
+    return 0;
+}
