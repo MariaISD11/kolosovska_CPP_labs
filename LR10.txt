@@ -1,3 +1,4 @@
+
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
@@ -34,23 +35,23 @@ int main()
 // 2
 
     srand(time(0));
-    const int m = 6, n = 4;
-    int arr[m][n];
+    const int m1 = 6, n1 = 4;
+    int arr1[m1][n1];
     
-    cout << "Масив (" << m << "x" << n << "):\n";
-    for (int i = 0; i < m; ++i) {
-        for (int j = 0; j < n; ++j) {
-            arr[i][j] = rand() % 100;
-            cout << arr[i][j] << "\t";
+    cout << "Масив (" << m1 << "x" << n1 << "):\n";
+    for (int i = 0; i < m1; ++i) {
+        for (int j = 0; j < n1; ++j) {
+            arr1[i][j] = rand() % 100;
+            cout << arr1[i][j] << "\t";
         }
         cout << endl;
     }
     
     cout << "\nКількість парних чисел у кожному стовпчику:\n";
-    for (int j = 0; j < n; ++j) {
+    for (int j = 0; j < n1; ++j) {
         int count = 0;
-        for (int i = 0; i < m; ++i) {
-            if (arr[i][j] % 2 == 0) {
+        for (int i = 0; i < m1; ++i) {
+            if (arr1[i][j] % 2 == 0) {
                 count++;
             }
         }
@@ -60,23 +61,23 @@ int main()
 // 3
 
     srand(time(0));
-    const int m = 5, n = 7;
-    int arr[m][n];
+    const int m2 = 5, n2 = 7;
+    int arr2[m2][n2];
     
-    cout << "Масив (" << m << "x" << n << "):\n";
-    for (int i = 0; i < m; ++i) {
-        for (int j = 0; j < n; ++j) {
-            arr[i][j] = rand() % 100;
-            cout << arr[i][j] << "\t";
+    cout << "Масив (" << m2 << "x" << n2 << "):\n";
+    for (int i = 0; i < m2; ++i) {
+        for (int j = 0; j < n2; ++j) {
+            arr2[i][j] = rand() % 100;
+            cout << arr2[i][j] << "\t";
         }
         cout << endl;
     }
     
     cout << "\nСума елементів кожного рядка:\n";
-    for (int i = 0; i < m; ++i) {
+    for (int i = 0; i < m2; ++i) {
         int sum = 0;
-        for (int j = 0; j < n; ++j) {
-            sum += arr[i][j];
+        for (int j = 0; j < n2; ++j) {
+            sum += arr2[i][j];
         }
         cout << "Рядок " << i << ": " << sum << endl;
     }
@@ -84,23 +85,23 @@ int main()
 // 4
 
     srand(time(0));
-    const int m = 4, n = 6;
-    int arr[m][n];
+    const int m3 = 4, n3 = 6;
+    int arr3[m3][n3];
     
-    cout << "Масив (" << m << "x" << n << "):\n";
+    cout << "Масив (" << m3 << "x" << n3 << "):\n";
     for (int i = 0; i < m; ++i) {
-        for (int j = 0; j < n; ++j) {
-            arr[i][j] = rand() % 100;
-            cout << arr[i][j] << "\t";
+        for (int j = 0; j < n3; ++j) {
+            arr3[i][j] = rand() % 100;
+            cout << arr3[i][j] << "\t";
         }
         cout << endl;
     }
     
     cout << "\nСума елементів кожного стовпчика:\n";
-    for (int j = 0; j < n; ++j) {
+    for (int j = 0; j < n3; ++j) {
         int sum = 0;
-        for (int i = 0; i < m; ++i) {
-            sum += arr[i][j];
+        for (int i = 0; i < m3; ++i) {
+            sum += arr3[i][j];
         }
         cout << "Стовпчик " << j << ": " << sum << endl;
     }
@@ -108,25 +109,25 @@ int main()
 // 5 
 
     srand(time(0));
-    const int m = 3, n = 4;
-    int arr[m][n];
+    const int m4 = 3, n4 = 4;
+    int arr4[m4][n4];
     
-    cout << "Масив (" << m << "x" << n << "):\n";
-    for (int i = 0; i < m; ++i) {
-        for (int j = 0; j < n; ++j) {
-            arr[i][j] = rand() % 100;
-            cout << arr[i][j] << "\t";
+    cout << "Масив (" << m4 << "x" << n4 << "):\n";
+    for (int i = 0; i < m4; ++i) {
+        for (int j = 0; j < n4; ++j) {
+            arr4[i][j] = rand() % 100;
+            cout << arr4[i][j] << "\t";
         }
         cout << endl;
     }
     
-    int max_val = arr[0][0];
+    int max_val = arr4[0][0];
     int max_i = 0, max_j = 0;
 
-    for (int i = 0; i < m; ++i) {
-        for (int j = 0; j < n; ++j) {
-            if (arr[i][j] > max_val) {
-                max_val = arr[i][j];
+    for (int i = 0; i < m4; ++i) {
+        for (int j = 0; j < n4; ++j) {
+            if (arr4[i][j] > max_val) {
+                max_val = arr4[i][j];
                 max_i = i;
                 max_j = j;
             }
@@ -139,25 +140,25 @@ int main()
 // 6
 
     srand(time(0));
-    const int m = 4, n = 7;
-    int arr[m][n];
+    const int m5 = 4, n5 = 7;
+    int arr5[m5][n5];
     
-    cout << "Масив (" << m << "x" << n << "):\n";
-    for (int i = 0; i < m; ++i) {
-        for (int j = 0; j < n; ++j) {
-            arr[i][j] = rand() % 100;
-            cout << arr[i][j] << "\t";
+    cout << "Масив (" << m5 << "x" << n5 << "):\n";
+    for (int i = 0; i < m5; ++i) {
+        for (int j = 0; j < n5; ++j) {
+            arr5[i][j] = rand() % 100;
+            cout << arr5[i][j] << "\t";
         }
         cout << endl;
     }
     
-    int min_val = arr[0][0];
+    int min_val = arr5[0][0];
     int min_i = 0, min_j = 0;
 
-    for (int i = 0; i < m; ++i) {
-        for (int j = 0; j < n; ++j) {
-            if (arr[i][j] < min_val) {
-                min_val = arr[i][j];
+    for (int i = 0; i < m5; ++i) {
+        for (int j = 0; j < n5; ++j) {
+            if (arr5[i][j] < min_val) {
+                min_val = arr5[i][j];
                 min_i = i;
                 min_j = j;
             }
@@ -170,14 +171,14 @@ int main()
 // 15
 
     srand(time(0));
-    const int m = 3, n = 3;
-    int arr[m][n];
+    const int m6 = 3, n6 = 3;
+    int arr6[m6][n6];
     
-    cout << "Масив (" << m << "x" << n << "):\n";
-    for (int i = 0; i < m; ++i) {
-        for (int j = 0; j < n; ++j) {
-            arr[i][j] = rand() % 100;
-            cout << arr[i][j] << "\t";
+    cout << "Масив (" << m6 << "x" << n6 << "):\n";
+    for (int i = 0; i < m6; ++i) {
+        for (int j = 0; j < n6; ++j) {
+            arr6[i][j] = rand() % 100;
+            cout << arr6[i][j] << "\t";
         }
         cout << endl;
     }
@@ -186,8 +187,8 @@ int main()
     int sum2 = 0;
 
     for (int i = 0; i < n; i++) {
-        sum1 += arr[i][i];
-        sum2 += arr[i][n - 1 - i];
+        sum1 += arr6[i][i];
+        sum2 += arr6[i][n - 1 - i];
     }
 
     cout << "\nСума елементів головної діагоналі: " << sum1 << endl;
